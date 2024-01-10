@@ -1,0 +1,343 @@
+@font-face {
+  font-family: Roboto Regular;
+  src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto Light;
+  src: url(../font/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto Bold;
+  src: url(../font/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto Medium;
+  src: url(../font/Roboto-Medium.ttf);
+}
+
+/* ! Allgemeine Stylings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Roboto Regular, Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  max-width: 1700px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto Bold, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 5.4rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 5.2rem;
+}
+
+h6 {
+  font-size: 4.5rem;
+}
+
+p {
+  font-family: Roboto Light, Arial, Helvetica, sans-serif;
+}
+
+/* ! Header */
+header {
+  background: url(../img/home.png) no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 100vh;
+  margin-bottom: 8vh;
+  position: relative;
+}
+
+/* ! Person platzieren und animieren */
+header img {
+  width: 800px;
+  position: absolute;
+  top: 180px;
+  right: 150px;
+  animation: person 2s ease-in-out infinite;
+}
+
+@keyframes person {
+  0%,
+  100% {
+    top: 180px;
+  }
+
+  50% {
+    top: 210px;
+  }
+}
+
+/* ! Logo */
+.logo {
+  margin: 0 0 40vh 5vw;
+  padding-top: 4vh;
+}
+
+.logo h3 {
+  margin-bottom: 1rem;
+}
+
+.logo p {
+  font-size: 1.2rem;
+}
+
+/* ! Begrüßungs-Textblock */
+.start {
+  margin: 0 0 10vh 8vw;
+  width: 50rem;
+}
+
+.start h1 {
+  margin-bottom: 2rem;
+}
+
+.start p {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 5rem;
+}
+
+.start p::after {
+  content: url(../img/rocket.png);
+}
+
+.start a {
+  color: #ff3571;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-family: Roboto Medium, Arial, Helvetica, sans-serif;
+}
+
+/* ! Main */
+/* ! Section mit Übersicht von Projektbildern */
+.projektbild {
+  background: url(../img/images.png) center no-repeat;
+  background-size: cover;
+  height: 70vh;
+  margin-bottom: 20vh;
+}
+
+/* ! Section zu Learnings */
+/* ! Einstieg mit 2x h2 und Textblock */
+.learnings h2:nth-child(2) {
+  margin: 0 0 15vh 15vw;
+  width: 40vw;
+  max-width: 650px;
+}
+
+.learnings-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 20vw 20vh 8vw;
+}
+
+.learnings-text h2 {
+  max-width: 30rem;
+}
+
+.learnings-text img {
+  width: 6rem;
+}
+
+.learnings-text p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+}
+
+/* ! Learnings: einzelne Erkenntnis-Boxen */
+/* ! der gesamte Article von learnings wird gegridet*/
+.learnings-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5rem;
+  margin-bottom: 20vh;
+}
+
+/* ! die learnings-divs werden alle einmal gegridet */
+.learnings-points div {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.learnings-points h4 {
+  align-self: flex-end;
+}
+
+.learnings-points img {
+  justify-self: right;
+  padding: 0 2vw;
+}
+
+.learnings-points p {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  grid-column: 2 / 3;
+
+  padding: 2rem 10rem 0 0;
+}
+
+/* ! Section Are you ready? - Challenge  */
+/* ! Box mit Überschrift und Text */
+.challenge-text {
+  text-align: center;
+  margin-bottom: 15vh;
+}
+
+.challenge-text h3 {
+  line-height: 3.3rem;
+  margin-bottom: 2rem;
+}
+
+.challenge-text p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 0 30vw;
+}
+
+/* ! Section Challenge - Einzelne Challenge-Boxen */
+
+.challenge {
+  margin-bottom: 20vh;
+}
+
+.challenge article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10vw;
+
+  margin: 0 10vw 10vh 8vw;
+}
+
+.challenge article img {
+  height: 40rem;
+}
+
+.challenge h5 {
+  color: #dddddd;
+  margin-bottom: 4rem;
+}
+
+.challenge h6 {
+  margin-bottom: 2rem;
+}
+
+.challenge h4 {
+  margin-bottom: 2rem;
+}
+
+.challenge p {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+/* ! Footer Subscription */
+.subscribe {
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subscribe h3 {
+  line-height: 3.3rem;
+  margin-bottom: 2rem;
+}
+
+.subscribe p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 0 30vw;
+  margin-bottom: 4rem;
+}
+
+/* ! Subscribe-Feld */
+.subscribe input[type="email"] {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(235, 235, 235);
+  width: 65rem;
+  padding: 3vh 0;
+  margin-bottom: 3vh;
+}
+
+::placeholder {
+  color: #757575;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+/* ! Submit-Button */
+.subscribe input[type="submit"] {
+  background-color: #ff3571;
+  color: white;
+  font-size: 1.9rem;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 2rem 7rem;
+
+  margin-bottom: 10vh;
+}
+
+/* ! created with love */
+footer div p,
+footer div img {
+  display: inline;
+}
+
+footer div p {
+  font-size: 1.8rem;
+  padding-bottom: 3vh;
+}
+
+footer div img {
+  height: 2.4rem;
+}
